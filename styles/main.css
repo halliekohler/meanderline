@@ -1,0 +1,456 @@
+*{
+	box-sizing: border-box;
+
+}
+
+
+
+/*HEADER STYLES*/
+
+#homepage-wrapper{
+	position: relative;
+	overflow-x: hidden;
+}
+
+#background-img{
+	width: 1600px;
+	z-index: 0;
+	overflow-x: hidden;
+}
+
+.logo-wrapper-text{
+	width: 350px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.logo-wrapper-circle{
+	width: 350px;
+	position: absolute;
+	top: 40%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+}
+
+.logo-wrapper-text, .logo-wrapper-circle {
+  animation: pulse 5s infinite;
+  animation-iteration-count: 1;
+}
+
+@keyframes pulse {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/*end header*/
+
+/*NAV BAR STYLES*/
+.fa-map {
+    display: none;
+    float: right;
+    margin: 15px;
+    cursor: pointer;
+  }
+
+#nav-wrapper{
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 20;
+}
+
+nav ul{
+	margin: 0;
+	padding-left: 0px;
+	display: block;
+
+}
+
+nav li{
+	list-style-type: none;
+	display: inline;
+	padding: 20px;
+
+}
+
+nav a{
+	text-decoration: none;
+	color: #d9e2c6;
+	font-size: 40px;
+	font-family: 'chapmanmedium';
+}
+
+nav a:hover{
+	color: #1c231e;
+	text-decoration: none;
+}
+
+a:active{
+	color: #1c231e;
+	text-decoration: none;
+}
+
+.affix-top{
+	height: 100px;
+	width: 100%;
+	position: absolute;
+	top: 715px;
+	left: 0;
+	background-color: rgba(70, 91, 70, 0.5);
+	text-align: center;
+}
+
+
+.affix{
+	background-color: rgba(97, 107, 95, 1);
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100px;
+	z-index: 100;
+	-webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+}
+
+
+.affix a{
+    color: #d9e2c6;
+    padding: 20px;
+    -webkit-transition: all .3s ease-in-out;
+    transition: all .3s ease-in-out;
+}
+
+.affix a:hover a:active{
+	color: #1c231e;
+	text-decoration: none;
+}
+
+.active{
+	color: #white;
+	text-decoration: none;
+}
+
+.hover-action-home{
+	background-img: url('./images/hover-home.svg');
+	position: absolute;
+	top: ;
+	left: ;
+	width: ;
+}
+
+.hover-action-work{
+	background-img: url('./images/hover-home.svg');
+	position: absolute;
+	top: ;
+	left: ;
+	width: ;
+}
+
+.hover-action-about{
+	background-img: url('./images/hover-home.svg');
+	position: absolute;
+	top: ;
+	left: ;
+	width: ;
+}
+
+.hover-action-contact{
+	background-img: url('./images/hover-home.svg');
+	position: absolute;
+	top: ;
+	left: ;
+	width: ;
+}
+
+/*----------------BODY----------------*/
+
+/*ABOUT*/
+
+#about{
+	background-image: url("maplines.svg");
+	background-color: #e3dfdd;
+	background-size: 100%;
+}
+
+#about p{
+	font-family: 'Roboto Condensed', sans-serif; 
+
+}
+
+#about a{
+	text-decoration: none;
+	color: white;
+	font-weight: bold;
+}
+
+#about a:hover{
+	color: #1c231e;
+	text-decoration: none;
+}
+.top-row-about h2{
+	padding: 50px;
+	margin: 0 auto;
+	width: 300px;
+	margin-top: 70px;
+}
+
+
+.about-column{
+	background-color: rgba(227, 223, 221, 0.8);
+	padding: 10px;
+	height: 500px;
+}
+
+
+.selfie img{
+	padding: 20px;
+	margin: 0 auto;
+	width: 100%;
+}
+
+
+.bottom-row{
+	height: 300px;
+	width: 100%;
+}
+
+/*.selfie img{
+	width: 200px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 10;
+}*/
+
+
+
+/*WORK*/
+.top-row-work h2{
+	padding: 50px;
+	margin: 0 auto;
+	width: 300px;
+	padding-top: 70px;
+
+}
+
+.top-row-work p{
+	font-family: 'Roboto Condensed', sans-serif; 
+	text-align: center;
+	padding: 0 100px;
+	color: #847e65;
+}
+
+.work-column{
+	height: 400px;
+	background-color: white;
+}
+
+.work-column img{
+	padding: 20px;
+	width: 90%;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	z-index: 10;
+}
+
+.layover{
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	width: 100%;
+	height: 100%;
+	z-index: 30;
+
+}
+
+.layover span{
+	display: none;
+}
+
+.layover:hover span{
+	display: block;
+	
+	text-decoration: none;
+	font-size: 40px;
+	line-height: 38px;
+	font-family: 'Amatic SC', cursive;
+	text-align: center;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	-webkit-transform: translate(-50%, -50%);
+	/*color: #d9e2c6;
+	-webkit-transition: color .5s ease-in-out;
+    transition: color .5s ease-in-out;*/
+}
+
+.layover:hover{
+	background-color: rgba(97, 107, 95, .8);
+	-webkit-transition: background-color .5s ease-in-out;
+    transition: background-color .5s ease-in-out;
+    color: #d9e2c6;
+	-webkit-transition: color .5s ease-in-out;
+    transition: color .5s ease-in-out;
+}
+/*MODAL*/
+/*.modal-wrapper{
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: rgba(122, 122, 122, 0.6);
+	z-index: 1000;
+	display: none;
+	overflow-x: hidden;
+	overflow-y: hidden;
+
+
+}
+
+
+.modal{
+	background-color: black;
+	position: relative;
+	top: calc(50% - 250px);
+	left: calc(50% - 250px);
+	height: 500px;
+	width: 500px;
+}*/
+
+
+/*.exit{
+	position: absolute;
+	top: -20px;
+	right: -20px;
+	background-color: white;
+	color: black;
+	width: 25px;
+	height: 25px;
+	border-radius: 25px;
+	font-size: 23px;
+	text-decoration: none;
+	text-align: center;
+}*/
+
+/*END MODAL*/
+
+
+
+
+/*CONTACT*/
+
+.top-row-contact h2{
+	padding: 50px;
+	margin: 0 auto;
+	width: 300px;
+}
+.form{
+	height: 900px;
+	background-image: url("maplines.svg");
+	background-color: #e3dfdd;
+	background-size: 100%;
+}
+
+/*END CONTACT*/
+
+
+
+
+
+
+
+
+
+/*------SPACE-------*/
+.space{
+	width: 100%;
+	height: 80px;
+}
+
+
+/*--------------MEDIA QUERIES----------------*/
+
+@media all and (min-width: 769px) and (max-width: 1260px) {
+	.affix ul{
+		width: 630px;
+	}
+}
+
+
+@media all and (min-width: 481px) and (max-width: 769px) {
+	/*.logo-wrapper-text, .logo-wrapper-circle{
+		display: none;
+	}*/
+
+nav ul{
+	margin: 0;
+	padding-left: 0px;
+	display: block;
+
+}
+
+nav li{
+	list-style-type: none;
+	display: inline;
+	padding: 20px;
+
+}
+
+nav a{
+	text-decoration: none;
+	color: #d9e2c6;
+	font-size: 40px;
+	font-family: 'chapmanmedium';
+}
+
+
+	.fa-map{
+		display: inline-block;
+		position: absolute;
+		top: 10px;
+		right: 50px;
+		width: 20px;
+		z-index: 100;
+		color: white;
+		width: 100px;
+	}
+
+	.space{
+		height: 60px;
+	}
+
+	.sm-space{
+		height: 20px;
+	}
+
+
+}
+
+@media all and (min-width: 360px) and (max-width: 480px) {
+
+	.homepage-wrapper{
+		display: none;
+	}
+
+	.space{
+		height: 60px;
+	}
+
+	.sm-space{
+		height: 20px;
+	}
+	
+}

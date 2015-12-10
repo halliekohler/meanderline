@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    
+<head>
+        
+        <title> anavbar </title>
+<!--     this is the link for the little diamond -->
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+<!--      this is the link to reset browser css -->
+      <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.css">
+
+    <style>
+      .fa-diamond {
+        display: none;
+        float: right;
+        margin: 15px;
+        cursor: pointer;
+      }
+
+      nav {
+        float: left;
+        width: 100%;
+        background-color: teal;
+      }
+
+      ul {
+        display: block;
+        float: left;
+      }
+
+      ul li {
+        display: inline-block;
+        padding: 15px;
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+      }
+
+      ul li a {
+        color: white;
+        font-family: georiga;
+        text-transform: uppercase;
+        letter-spacing: 2px;
+        text-decoration: none;
+      }
+
+
+
+      @media all and (max-width: 400px) {
+        .fa-diamond {
+          display: block;
+          color: lightgreen;
+        }
+
+        ul {
+          display: none;
+/*          this is display: none so that it does not display the dropdown until script is activated */
+          width: 100%;
+          border-top: 1px solid white;
+        }
+
+       li {
+          width: 100%;
+          border-bottom: 1px solid white;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <nav>
+      <i class="fa fa-diamond"></i>
+<!--      this is the icon being placed in html using i -->
+      <ul>
+        <li><a href="#!">About</a></li>
+        <li><a href="#!">Locations</a></li>
+        <li><a href="#!">Menu</a></li>
+      </ul>
+    </nav>
+<!-- use "#!" so that when the user clicks it won't refresh the page trying to load an unspecified "" link -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+
+    <script>
+    $(document).ready(function() {
+      $(".fa-diamond").click(function() {
+//when the user clicks on the diaomnd icon, this funcion is run: 
+        if ($("ul").hasClass("open")) {
+           $("ul").slideUp();
+           $("ul").removeClass("open");
+       } else {
+          $("ul").slideDown();
+           $("ul").addClass("open");
+         }
+//this logis is saying that if the list(ul) has the class "open" (which means it is dropped down) on click it should slide up and remove the "open" class. So that when it is closed, it does not have class "open" (which is the original starting point) and the else statement is true, which slides it back down and adds the class "open" which can then be detected.
+        });
+      });
+    </script>
+  </body>
+</html>
+
+<!-- QUESTION:
+- after I use/click on the nav bar in max-width: 400px, when I resize my browser window larger than 400px I have to refresh the page to see it again. If I resize the browser window in and out without clicking the icon, this is not a problem. Do I need to reset something?
+ -->
+<!--  -->
